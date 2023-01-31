@@ -1,8 +1,16 @@
+import React, { useState, useEffect } from "react";
+
 import logo from "./logo.svg";
 import "./App.css";
 import Counter from "./Counter";
+import CounterFunctional from "./CounterFunctionalComp";
 
-function App(props) {
+function MyApp(props) {
+  const [myState, updateState] = useState("name");
+
+  const changeState = () => {
+    updateState("newName");
+  };
   return (
     <div className="App">
       <header className="App-header">
@@ -16,10 +24,13 @@ function App(props) {
         >
           Learn React
         </a>
+        {myState}
+        <button onClick={changeState}>change State</button>
         <Counter />
+        <CounterFunctional />
       </header>
     </div>
   );
 }
 
-export default App;
+export default MyApp;

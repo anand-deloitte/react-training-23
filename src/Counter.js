@@ -5,6 +5,7 @@ class Counter extends Component {
     super(props);
     this.state = {
       count: 1,
+      name: "Random",
     };
   }
   updateCount = () => {
@@ -13,7 +14,12 @@ class Counter extends Component {
   updateCountDec = () => {
     this.setState((preveState) => ({ count: preveState.count - 1 }));
   };
+
+  componentDidUpdate = () => {
+    // debugger;
+  };
   render() {
+    debugger;
     return (
       <div>
         <h2>Counter : {this.state.count}</h2>
