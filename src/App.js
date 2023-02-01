@@ -4,7 +4,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import Counter from "./Counter";
 import CounterFunctional from "./CounterFunctionalComp";
-
+// import ContextComp from "./context";
 function MyApp(props) {
   const [myState, updateState] = useState("name");
 
@@ -24,10 +24,11 @@ function MyApp(props) {
         >
           Learn React
         </a>
-        {myState}
+
         <button onClick={changeState}>change State</button>
-        <Counter />
-        <CounterFunctional />
+        <Counter data={myState} />
+        <CounterFunctional data={myState} />
+        {/* <ContextComp></ContextComp> */}
       </header>
     </div>
   );
