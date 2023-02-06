@@ -1,0 +1,21 @@
+.top-nav-wrapper {
+    background-color: black;
+    overflow: hidden;
+    a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 15px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+    :hover{
+        background-color: #ddd;
+        color: black;
+    }
+    .active {
+        background-color: red;
+        color: white;
+    }
+}

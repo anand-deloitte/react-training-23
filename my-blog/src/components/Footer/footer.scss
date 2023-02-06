@@ -1,0 +1,14 @@
+.footer-container {
+    margin-top: 10px;
+    background-color: grey;
+    color: black;
+    padding: 10px;
+    text-align: left;
+    button {
+        font-size: 16px;
+        cursor: pointer;
+    }
+    button:last-child {
+        margin-left: 5px;
+    }
+}
