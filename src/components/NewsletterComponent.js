@@ -45,32 +45,38 @@ class NewsletterComponent extends Component {
 
   render() {
     return (
-      <Flex className="newsletter" flexDirection='column' >
+      <Flex className="newsletter w3-card-4 w3-margin w3-white" flexDirection='column' bg='white' m='16px' >
             <img src={this.props.blogImgUrl} alt=""></img>
-            <h3>{this.props.blogName}</h3>
-            <h5>{this.props.blogDescAndDate}</h5>
+            <div class="w3-container">
+              <h3><b>{this.props.blogName}</b></h3>
+              <h5>{this.props.blogDescAndDate}</h5>
+            </div>
+            <div className="w3-container">
             <p>
               {this.props.blogContent}
             </p>
-        <Flex flexDirection='column' class="commentSection">
-          <Flex justifyContent='space-between' p='2'>
-              <Button variant='outline' size='md'>Read More &gt; &gt;</Button>
-              <span onClick={this.isCommentSectionClosed}> <b><u>Comments</u> &nbsp;</b><span class="w3-tag">{this.state.commentsCounter}</span></span>
-          </Flex>
-          <Flex justifyContent='space-between' p='2' hidden={this.state.isCommentSectionClosed ? true : false}>
-              <Input placeholder='Comment Section --->' onChange={this.writeComment.bind(this)} value = {this.state.commentInput} />
-              <Button variant='outline' size='md' onClick={this.saveComment.bind(this)}>Save Comment</Button>
-          </Flex>
-          <Flex justifyContent='flex-end'>
-            <Box variant='outline' size='md' bg='lightgreen' onClick={this.showAllComment.bind(this)}><b><u>Show All Comments</u></b></Box>
-            <Box hidden={this.state.isCommentsHidden ? true : false}>
-                Below are comments posted yet:
-                {this.state.commentStore.map((value, index) => {
-                 return <li key={index}>{value}</li>
-              })}
-            </Box>
-          </Flex>
-        </Flex>
+            <Flex flexDirection='column' class="commentSection">
+              <Flex justifyContent='space-between' pb='16px'>
+                  <Button variant='outline' size='md' className="error-button">Read More &gt; &gt;</Button>
+                  <span onClick={this.isCommentSectionClosed}> <b><u>Comments</u> &nbsp;</b><span class="w3-tag">{this.state.commentsCounter}</span></span>
+              </Flex>
+              <Flex justifyContent='space-between' hidden={this.state.isCommentSectionClosed ? true : false} pb='16px'>
+                  <Input placeholder='Comment Section --->' onChange={this.writeComment.bind(this)} value = {this.state.commentInput} /> &nbsp; &nbsp;
+                  <Button variant='outline' size='md' className="error-button" onClick={this.saveComment.bind(this)}>Save Comment</Button>
+              </Flex>
+              <Flex flexDirection='column' justifyContent='center' pb='4'>
+                <Button variant='outline' className="show-all-comments"  size='md' bg='cadetblue' onClick={this.showAllComment.bind(this)}><b><u>Show All Comments</u></b></Button>
+                <Box hidden={this.state.isCommentsHidden ? true : false} mt='4px' >
+                  <Box bg='powderblue'>
+                    Below are comments posted yet:
+                    {this.state.commentStore.map((value, index) => {
+                    return <li key={index}>{value}</li>
+                  })}
+                  </Box>
+                </Box>
+              </Flex>
+            </Flex>
+          </div>
       </Flex>
     );
   }

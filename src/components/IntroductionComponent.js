@@ -9,10 +9,12 @@ class IntroductionComponent extends Component {
 
   render() {
     return (
-      <Flex className="introduction" flexDirection='column'>
-            <img src={this.props.userImage} alt=""></img>
-            <h1>{this.props.userName}</h1>
+      <Flex className="introduction w3-card w3-margin w3-margin-top" flexDirection='column' bg='white'>
+        <img src={this.props.userImage} alt=""></img>
+        <div className="w3-container w3-white">
+            <h4>{this.props.userName}</h4>
             <p>{this.props.userIntroduction}</p>
+        </div>
       </Flex>
     );
   }

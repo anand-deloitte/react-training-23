@@ -10,9 +10,10 @@ class HeaderComponent extends Component {
 
   render() {
     return (
-      <Flex className="header">
-        <Router />
-      </Flex>
+      <div className="">
+          <h1><b>MY BLOG</b></h1>
+          <p>Welcome to the blog of <span class="w3-tag">Richa</span></p>
+      </div>
     );
   }
 }
