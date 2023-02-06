@@ -1,0 +1,47 @@
+.header-container {
+    text-align: center;
+}
+.container {
+    display: flex;
+}
+.tags-col {
+    box-shadow: 0 4px 10px 0 rgb(0 0 0 / 20%), 0 4px 20px 0 rgb(0 0 0 / 19%);
+    margin: 16px;
+    padding: 16px;
+    width: 100%;
+}
+.blog-card {
+    box-shadow: 0 4px 10px 0 rgb(0 0 0 / 20%), 0 4px 20px 0 rgb(0 0 0 / 19%);
+    width: 700px;
+    margin: 16px;
+    padding: 16px;
+}
+.read-more {
+    padding: 12px 24px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+}
+.read-more:hover {
+    color: #000;
+    background-color: #ccc;
+}
+.comments {
+    padding: 12px 24px;
+    float: right;
+    border: none;
+    background-color: #fff;
+}
+.blog-comment-link {
+    float: right;
+    border: none;
+    background-color: #fff;
+}
+.comment-count {
+    background-color: black;
+    color: white;
+    padding: 8px;
+    margin-left: 8px;
+}
+.read-more, .blog-comment-link {
+    margin-top: 16px;
+}
