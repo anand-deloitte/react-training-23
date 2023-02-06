@@ -1,13 +1,176 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-color: #f1f1f1 !important;
+  font-family: "Raleway", sans-serif !important;
+  margin: 0px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.heading {
+  font-size: 20px;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.heading span {
+  background-color: black;
+  color: white;
+}
+
+.navbar {
+  width: 100%;
+  background-color: #555;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+ 
+}
+.navbar li {
+  float: left;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  
+}
+.navbar ul{
+  list-style: none;
+}
+.navbar li:hover {
+  background-color: lightgray;
+}
+
+.right-nav {
+  float: right;
+}
+
+.content {
+  margin: 0 2%;
+  float: left;
+}
+.content .conntent-left {
+  width: 66%;
+  float: left;
+}
+.content .conntent-left .container {
+  margin-bottom: 40px;
+}
+.content .content-right {
+  width: 33.88%;
+  float: right;
+}
+@media only screen and (max-width: 767px) {
+  .content .content-right, .content .conntent-left {
+    width: 100% !important;
+  }
+}
+.content .container {
+  margin: 16px;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: #fff;
+}
+.content .container-heading {
+  padding: 10px 16px;
+}
+.content .container-footer {
+  display: flex;
+  justify-content: space-between;
+}
+.content .container-footer button {
+  background-color: white;
+  padding: 10px 22px;
+  border: 1px solid #ccc;
+  font-weight: 500;
+}
+.content .container-footer button:hover {
+  background-color: rgba(35, 35, 36, 0.1607843137);
+}
+.content .container-footer div {
+  padding: 10px 22px;
+}
+.content .container-footer div span {
+  background-color: black;
+  color: white;
+  padding: 2px 4px;
+}
+.content .postCard {
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.content .postCard h4 {
+  padding: 25px;
+  margin-bottom: -10px;
+  background-color: #f1f1f1;
+}
+.content .postCard ul {
+  padding: 0;
+  margin: 0 !important;
+  background-color: white;
+  list-style-type: none;
+}
+.content .postCard ul li {
+  border-bottom: 1px solid #ddd;
+  padding: 15px;
+  display: flex;
+}
+.content .postCard ul li:hover {
+  background-color: rgba(52, 58, 64, 0.1607843137);
+}
+.content .postCard ul li img {
+  height: auto;
+  width: 15%;
+}
+.content .postCard ul li div {
+  margin-left: 20px;
+}
+.content .postCard ul li span:first-of-type {
+  font-size: 18px;
+}
+.content .tags {
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.content .tags h4 {
+  padding: 10px 15px;
+  margin-bottom: -15px;
+}
+.content .tags div {
+  padding: 10px;
+  background-color: white;
+}
+.content .tags div p:first-of-type {
+  background-color: black;
+  color: white;
+  font-size: 14px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+.content .tags div p {
+  padding: 5px;
+  background-color: rgba(52, 58, 64, 0.1607843137);
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.527);
+  display: inline-block;
+  margin-bottom: 10px;
+}
+.content img{
+  width: 100%;
+}
+
+.footer {
+  background-color: #555;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  display: inline-block;
+  width: 100%;
+}
+.footer button {
+  width: 8%;
+  background-color: black;
+  padding: 8px;
+  margin-left: 10px;
+  color: white;
+}
+.footer button:hover {
+  background-color: lightgray;
+}
+@media only screen and (max-width: 767px) {
+  .footer button {
+    width: 20%;
+  }
 }

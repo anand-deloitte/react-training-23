@@ -1,37 +1,25 @@
-import React, { useState, useEffect } from "react";
 
-import logo from "./logo.svg";
-import "./App.css";
-import Counter from "./Counter";
-import CounterFunctional from "./CounterFunctionalComp";
-// import ContextComp from "./context";
-function MyApp(props) {
-  const [myState, updateState] = useState("name");
+import Blog from './Components/BlogComponents';
+import {blogEntry1} from './Components/BlogComponents';
+import PostCard from './Components/PostCard'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Header from './Components/Header'
+import LeftCards from './Components/LeftCards.js';
 
-  const changeState = () => {
-    updateState("newName");
-  };
+function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Welcome : {props.name}</p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-
-        <button onClick={changeState}>change State</button>
-        <Counter data={myState} />
-        <CounterFunctional data={myState} />
-        {/* <ContextComp></ContextComp> */}
-      </header>
+    <div>
+      <Router> 
+        <Header/>
+        <Routes>
+          <Route path="/" exact element={<Blog/>} />
+          <Route path="/blog2" exact element={<PostCard/>} />
+          <Route path="/blog3" exact element={<LeftCards {...blogEntry1}/>} />
+          </Routes>
+        </Router>
+    
     </div>
   );
 }
 
-export default MyApp;
+export default App;
