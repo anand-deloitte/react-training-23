@@ -1,37 +1,28 @@
-import React, { useState, useEffect } from "react";
-
-import logo from "./logo.svg";
 import "./App.css";
-import Counter from "./Counter";
-import CounterFunctional from "./CounterFunctionalComp";
-// import ContextComp from "./context";
-function MyApp(props) {
-  const [myState, updateState] = useState("name");
-
-  const changeState = () => {
-    updateState("newName");
-  };
+import Header from "./Components/Header";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import NavItem from "./Components/NavItem";
+import Home from "./Components/Home";
+function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Welcome : {props.name}</p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-
-        <button onClick={changeState}>change State</button>
-        <Counter data={myState} />
-        <CounterFunctional data={myState} />
-        {/* <ContextComp></ContextComp> */}
-      </header>
+    <div>
+      <Router>
+        <Header />
+        <Routes>
+          <Route path="/" exact element={<Home/>} />
+          <Route path="/home" exact element={<Home/>} />
+          <Route path="/about" element={<NavItem page="About" imgUrl='images/post1.jpg'/>} />
+          <Route path="/events" element={<NavItem page="Events" imgUrl='images/post2.jpg' />} />
+          <Route path="/blogs" element={<NavItem page="Blogs" imgUrl='images/post3.jpg'/>} />
+          <Route path="/sign-up" element={<NavItem page="Sign Up" imgUrl ='images/post4.jpg'/>} />
+          <Route path="/travel" element={<NavItem page="Travel" imgUrl ='images/post4.jpg'/>} />
+          <Route exact path="/food" element={<NavItem page="Food" imgUrl ='images/post4.jpg' />}></Route>
+          <Route exact path="/family" element={<NavItem page="Family" imgUrl ='images/post4.jpg'/>} />
+          <Route path="/dance" element={<NavItem page="Dance" imgUrl ='images/post4.jpg' />} />
+        </Routes>
+      </Router>
     </div>
   );
 }
 
-export default MyApp;
+export default App;
