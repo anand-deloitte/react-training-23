@@ -1,8 +1,9 @@
-import React, {createRef, useRef, useState, useEffect} from "react";
+import React, {useState} from "react";
 import CommentTextArea from "./CommentTextArea"
 
 function Blogs(props){
     const[isComment, setIsComment] = useState(false);
+    var[commentsCount, setCommentsCount] = useState(0);
 
     const addComment = () => {
         setIsComment(true);
@@ -22,9 +23,9 @@ function Blogs(props){
                 <p><button className="w3-button w3-padding-large w3-white w3-border"><b>READ MORE »</b></button></p>
                 </div>
                 <div className="w3-col m4 w3-hide-small">
-                <p><a onClick={addComment} className="w3-padding-large w3-right comments"><b>Comments &nbsp;</b> <span className="w3-tag">0</span></a></p>
+                <p><a onClick={addComment} className="w3-padding-large w3-right comments"><b>Comments &nbsp;</b> <span className="w3-tag">{commentsCount}</span></a></p>
                 </div>
-                { isComment ? <CommentTextArea /> : null }
+                { isComment ? <CommentTextArea commentsCount={commentsCount} setCommentsCount={setCommentsCount}/> : null }
             </div>
             </div>
         </div>
