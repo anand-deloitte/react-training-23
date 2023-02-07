@@ -1,37 +1,27 @@
-import React, { useState, useEffect } from "react";
-
-import logo from "./logo.svg";
 import "./App.css";
-import Counter from "./Counter";
-import CounterFunctional from "./CounterFunctionalComp";
-// import ContextComp from "./context";
-function MyApp(props) {
-  const [myState, updateState] = useState("name");
-
-  const changeState = () => {
-    updateState("newName");
-  };
+import Header from "./components/Header";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import NavItem from "./components/NavProps";
+import Home from "./components/Home";
+function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Welcome : {props.name}</p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-
-        <button onClick={changeState}>change State</button>
-        <Counter data={myState} />
-        <CounterFunctional data={myState} />
-        {/* <ContextComp></ContextComp> */}
-      </header>
+    <div>
+      <Router>
+        <Header />
+        <Routes>
+          <Route path="/" exact element={<Home/>} />
+          <Route path="/home" exact element={<Home/>} />
+          <Route path="/about" element={<NavItem page="About" imgUrl='images/gondol.jpg'/>} />
+          <Route path="/services" element={<NavItem page="Services" imgUrl='images/rock.jpg' />} />
+          <Route path="/blogs" element={<NavItem page="Blogs" imgUrl='images/skies.jpg'/>} />
+          <Route path="/travel" element={<NavItem page="Travel" imgUrl ='images/gondol.jpg'/>} />
+          <Route exact path="/newYork" element={<NavItem page="New York" imgUrl ='images/rock.jpg' />}></Route>
+          <Route exact path="/london" element={<NavItem page="London" imgUrl ='images/skies.jpg'/>} />
+          <Route path="/ikea" element={<NavItem page="IKEA" imgUrl ='images/workshop.jpg' />} />
+        </Routes>
+      </Router>
     </div>
   );
 }
 
-export default MyApp;
+export default App;
