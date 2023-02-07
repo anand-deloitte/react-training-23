@@ -1,6 +1,4 @@
-.App {
-  text-align: center;
-}
+
 
 .App-logo {
   height: 40vmin;
@@ -35,4 +33,96 @@
   to {
     transform: rotate(360deg);
   }
+}
+ .blog-container {
+  display: flex;
+  margin: 0 3%;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+.blog-container .left-container{
+  flex-basis: 66%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+
+
+}
+.blog-container .right-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  flex-basis: 33%;
+}
+
+
+/*.blog-card {
+  font-family: Verdana,sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    box-shadow: 0 4px 10px 0 rgb(0 0 0 / 20%);
+    background-color: #fff!important;
+    
+}
+
+.card-button {
+  padding: 12px 24px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
+.card-button:hover {
+  color: #000;
+  background-color: #ccc;
+}
+
+.popular-post-container {
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.popular-post-container h4 {
+  padding: 15px;
+  background-color: lightgray;
+}
+.popular-post-container ul {
+  padding: 0;
+  margin: 0 !important;
+  background-color: white;
+  list-style-type: none;
+}
+.popular-post-container ul li {
+  border-bottom: 1px solid #ddd;
+  padding: 15px;
+  display: flex;
+}
+.popular-post-container ul li:hover {
+  background-color: rgba(52, 58, 64, 0.1607843137);
+}
+.popular-post-container ul li img {
+  height: auto;
+  width: 15%;
+}
+.popular-post-container ul li div {
+  margin-left: 20px;
+}
+.popular-post-container ul li span:first-of-type {
+  font-size: 18px;
+}
+
+.tags-container {
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
+} */
+
+h4{
+  font-weight: 400;
+  margin: 10px 0;
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
+}
+
+li{
+  padding: 8px 16px;
+    border-bottom: 1px solid #ddd;
+}
+
+p {
+  text-align: left;
 }
