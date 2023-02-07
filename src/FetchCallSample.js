@@ -7,6 +7,7 @@ const Services = () => {
 
   useEffect(() => {
     setLoading(true);
+    // https://63e22e07ad0093bf29c9980e.mockapi.io/teststore/plp/1  // sample get call for get product by id
     fetch("https://63e22e07ad0093bf29c9980e.mockapi.io/teststore/plp")
       .then((res) => res.json())
       .then((res) => {
