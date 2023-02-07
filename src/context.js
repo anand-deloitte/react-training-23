@@ -1,24 +1,28 @@
 import React from "react";
 
-export const UserConext = React.createContext();
+export const UserContext = React.createContext();
 
-//Provider
-//concumer
-export default function ContextComp() {
+export default function ContextComponent() {
   return (
-    <UserConext.Provider value="React context">
+    <UserContext.Provider value="Blue and red">
       <User />
-    </UserConext.Provider>
+    </UserContext.Provider>
   );
 }
 
 function User() {
   return (
-    <UserConext.Consumer>
-      <p>This is react Context example</p>
-      {(value) => {
-        <h1> {value}</h1>;
-      }}
-    </UserConext.Consumer>
+    // <UserContext.Consumer>{(value) => <h1>{value}</h1>}</UserContext.Consumer>
+    <UserBadge></UserBadge>
+  );
+}
+
+function UserBadge() {
+  return (
+    <p>
+      {" "}
+      value inside User UserBadge{" "}
+      <UserContext.Consumer>{(value) => <h1>{value}</h1>}</UserContext.Consumer>
+    </p>
   );
 }
