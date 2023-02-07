@@ -1,37 +1,30 @@
-import React, { useState, useEffect } from "react";
+import BodyShorthandExample from './Card';
+import './App.css';
+import json from './assets/JSON/Card.json';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import DelhiData from './Delhi';
+import NewYorkData from './NewYork';
+import LondonData from './London';
 
-import logo from "./logo.svg";
-import "./App.css";
-import Counter from "./Counter";
-import CounterFunctional from "./CounterFunctionalComp";
-// import ContextComp from "./context";
-function MyApp(props) {
-  const [myState, updateState] = useState("name");
-
-  const changeState = () => {
-    updateState("newName");
-  };
+function App(props) {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Welcome : {props.name}</p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-
-        <button onClick={changeState}>change State</button>
-        <Counter data={myState} />
-        <CounterFunctional data={myState} />
-        {/* <ContextComp></ContextComp> */}
+      <header className='App-header'>
+        <h1>My Blog</h1>
+        <p>Welcome to my blog</p>
       </header>
-    </div>
+        
+      <BrowserRouter>
+        <Routes>
+            <Route path='/' element={<BodyShorthandExample data={json} />}></Route>
+            <Route path='/london' element={< LondonData data={json} />}></Route>  
+            <Route path='/newyork' element={< NewYorkData data={json} />}></Route>
+            <Route path='/delhi' element={< DelhiData data={json} />}></Route>
+        </Routes> 
+      </BrowserRouter>
+      <footer className='App-footer'><h2>Footer</h2></footer>
+    </div> 
   );
 }
 
-export default MyApp;
+export default App;

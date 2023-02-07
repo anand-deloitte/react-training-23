@@ -1,30 +1,27 @@
 import React, { Component } from "react";
+import {Button} from 'react-bootstrap';
+
 //ES6
 class Counter extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      count: 1,
-      name: "Random",
+      count: 0
     };
   }
-  updateCount = () => {
+  
+
+  updateCountAndClear = () => {
     this.setState((preveState) => ({ count: preveState.count + 1 }));
   };
-  updateCountDec = () => {
-    this.setState((preveState) => ({ count: preveState.count - 1 }));
-  };
 
-  componentDidUpdate = () => {
-    // debugger;
-  };
   render() {
     debugger;
     return (
-      <div>
-        <h2>Counter : {this.state.count}</h2>
-        <button onClick={this.updateCount.bind(this)}>+</button>
-        <button onClick={this.updateCountDec.bind(this)}>-</button>
+      <div className="comment-section">       
+        <input class="col-12" type="text" placeholder='Comment' />  
+        <p>Number of comments : {this.state.count}</p>
+        <Button variant="secondary" onClick={this.updateCountAndClear.bind(this)}>Add</Button>
       </div>
     );
   }
