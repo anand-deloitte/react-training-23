@@ -2,36 +2,48 @@ import React, { useState, useEffect } from "react";
 
 import logo from "./logo.svg";
 import "./App.css";
-import Counter from "./Counter";
-import CounterFunctional from "./CounterFunctionalComp";
 // import ContextComp from "./context";
-function MyApp(props) {
-  const [myState, updateState] = useState("name");
+import { ChakraProvider } from '@chakra-ui/react'
 
-  const changeState = () => {
-    updateState("newName");
-  };
+import { Flex, Spacer, Box } from '@chakra-ui/react'
+// Components Import
+import HeaderComponent from './components/HeaderComponent';
+import IntroductionComponent from './components/IntroductionComponent';
+import NewsletterComponent from './components/NewsletterComponent';
+import FooterComponent from './components/FooterComponent';
+import PopularPostsComponent from './components/PopularPostsComponent';
+import TagComponent from "./components/TagComponent";
+import { introductioncomponentdata1, newslettercomponentdata1, newslettercomponentdata2, popularpostcomponentdata1 } from "./constants/Constants";
+
+function App(props) {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Welcome : {props.name}</p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-
-        <button onClick={changeState}>change State</button>
-        <Counter data={myState} />
-        <CounterFunctional data={myState} />
-        {/* <ContextComp></ContextComp> */}
+    <ChakraProvider>
+    <Flex flexDirection="column">
+      <header className="w3-container w3-center w3-padding-32">
+        <Flex justifyContent="space-evenly" alignItems='center'>
+          <HeaderComponent />
+        </Flex>
       </header>
-    </div>
+      <section className="flex-class">
+        <Flex fexDirection="row">
+            <Box wrap="wrap" alignItems="left"  p={4} className="left-component">
+              <NewsletterComponent {...newslettercomponentdata1} />
+              <NewsletterComponent {...newslettercomponentdata2} />
+            </Box>
+            <Box wrap="wrap" alignItems="right" className="right-component" p={4}>
+              <IntroductionComponent {...introductioncomponentdata1} />
+              <PopularPostsComponent propData={popularpostcomponentdata1} />
+              <TagComponent />
+          </Box>
+        </Flex>
+      </section>
+      <footer>
+          <FooterComponent />
+      </footer>
+    </Flex>
+  </ChakraProvider>
   );
 }
 
-export default MyApp;
+export default App;
