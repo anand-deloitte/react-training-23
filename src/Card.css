@@ -1,0 +1,51 @@
+.card-parent {
+    padding: 10px;
+}
+
+.bt-card {
+    margin: 20px 0;
+}
+
+.button-parent {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-title,
+.card-subtitle,
+.card-text {
+    text-align: left;
+}
+
+.post-body {
+    padding: 0;
+}
+
+.post-ul {
+    padding: 0;
+    list-style-type: none;
+    text-align: left;
+    margin: 0;
+}
+
+.post-li {
+    border-top: 1px solid #aaa3a3;
+    padding: 10px;
+}
+
+.tag-body {
+    text-align: left;
+}
+
+.tag-link {
+    appearance: none;
+    padding: 2px;
+    border: 1px solid black;
+    color: black;
+    text-decoration: none;
+    margin-right: 5px;
+}
+
+.comment-section {
+    margin-top: 20px;
+}
