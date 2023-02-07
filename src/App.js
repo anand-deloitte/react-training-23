@@ -1,37 +1,24 @@
-import React, { useState, useEffect } from "react";
+import './App.css';
+import { Routes, Route } from 'react-router-dom';
+import Home from './Layouts/Home'
+import Header from './component/Header';
+import Dashboard from './Layouts/Dashboard';
+import About from './Layouts/About';
+import Contact from './Layouts/Contact';
 
-import logo from "./logo.svg";
-import "./App.css";
-import Counter from "./Counter";
-import CounterFunctional from "./CounterFunctionalComp";
-// import ContextComp from "./context";
-function MyApp(props) {
-  const [myState, updateState] = useState("name");
-
-  const changeState = () => {
-    updateState("newName");
-  };
+function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Welcome : {props.name}</p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-
-        <button onClick={changeState}>change State</button>
-        <Counter data={myState} />
-        <CounterFunctional data={myState} />
-        {/* <ContextComp></ContextComp> */}
-      </header>
+    <div className="App w3-content">
+      <Header name="Akshaya"/>
+      <Routes>
+        <Route path="/" element={<Dashboard />}></Route>
+        <Route path="/home" element={<Home />}></Route>
+        <Route path="/about" element={<About />}></Route>
+        <Route path="/blog" element={<Dashboard />}></Route>
+        <Route path="/contacts" element={<Contact />}></Route>
+      </Routes>
     </div>
   );
 }
 
-export default MyApp;
+export default App;
