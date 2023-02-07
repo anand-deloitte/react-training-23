@@ -13,6 +13,8 @@ import blogs from "./static/data"
 import Footer from "./components/Footer";
 
 // import ContextComp from "./context";
+import UserContext from "./Context";
+import Services from "./ServicesCall";
 function MyApp(props) {
   // const [myState, updateState] = useState("name");
 
