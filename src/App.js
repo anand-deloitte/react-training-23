@@ -1,22 +1,32 @@
 import "./App.css";
-import Header from "./Components/Header";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import NavItem from "./Components/NavItem";
-import Home from "./Components/Home";
-function App() {
+import Counter from "./Counter";
+import CounterFunctional from "./CounterFunctionalComp";
+// import ContextComp from "./context";
+function MyApp(props) {
+  const [myState, updateState] = useState("name");
+
+  const changeState = () => {
+    updateState("newName");
+  };
   return (
-    <div>
-      <Router>
-        <Header />
-        <Routes>
-          <Route path="/" exact element={<Home/>} />
-          <Route path="/home" exact element={<Home/>} />
-          <Route path="/about" element={<NavItem page="About"/>} />
-          <Route path="/events" element={<NavItem page="Events"/>} />
-          <Route path="/blogs" element={<NavItem page="Blogs"/>} />
-          <Route path="/sign-up" element={<NavItem page="Sign Up"/>} />
-        </Routes>
-      </Router>
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>Welcome : {props.name}</p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+
+        <button onClick={changeState}>change State</button>
+        <Counter data={myState} />
+        <CounterFunctional data={myState} />
+        {/* <ContextComp></ContextComp> */}
+      </header>
     </div>
   );
 }
