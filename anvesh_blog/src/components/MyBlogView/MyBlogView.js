@@ -49,7 +49,7 @@ const MyBlogView = () => {
   const tags = ['Travel','New York','London','IKEA','NORWAY','DIY','Ideas','Baby','Family','News','Clothing','Sports','Games'];
   
   const cardRight = {
-    title: "My Name",
+    title: "Anvesh",
     description: "Just me, myself and I, exploring the universe of uknownment. I have a heart of love and a interest of lorem ipsum and mauris neque quam blog. I want to share my world with you.",
     imageUrl: "https://www.w3schools.com/w3images/avatar_g.jpg"
   }
