@@ -1,0 +1,17 @@
+.blog-header-container {
+    padding: 0.5em;
+    text-align: center;
+    font-size: 15px;
+    color: black;
+    .welcome-text {
+        margin: 0 0 10px;
+        .username {
+            display: inline-block;
+            font-size: 20px;
+            color: #f1f1f1;
+            background-color: black;
+            border-radius: 0.3em;
+            padding: 0 5px;
+        }
+    }
+}
