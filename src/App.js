@@ -12,7 +12,7 @@ function App() {
         <Routes>
         <Route path="/" exact element={<Home/>} />
         <Route path="/home" exact element={<Home/>} />
-          <Route path="/mens" element={<NavItem page="About" imgUrl='images/post1.jpg'/>} />
+          <Route path="/mens" element={<NavItem page="Mens" imgUrl='images/post1.jpg'/>} />
           <Route path="/newArrivals" element={<NavItem page="New Arrivals" imgUrl='images/post2.jpg' />} />
           <Route path="/womens" element={<NavItem page="Womens" imgUrl='images/post3.jpg'/>} />
           <Route path="/electronics" element={<NavItem page="Electronics" imgUrl ='images/post4.jpg'/>} />

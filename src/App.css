@@ -68,6 +68,23 @@ margin: 40px;
   flex-direction: row;
 
 }
-/* .plp-filters{
-  width: 30%;
-} */
+.plp-modal{
+  display: flex;
+  justify-content: space-around
+
+}
+.plp-modal .name{
+  color: #0070d2;
+    text-transform: capitalize;
+  }
+.plp-modal .desc{
+  text-transform: capitalize;
+  }
+  .plp-modal .price{
+    font-weight: bold;
+  }
+
+.anc{
+  display: flex;
+    justify-content: center;
+} 
