@@ -1,14 +1,18 @@
 import { useEffect, useState } from "react";
 import ProductCard from "./ProductCard";
+import { useParams } from "react-router-dom";
 
-function NavItem(props) {
+function ProductDetails(props) {
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
+  const params = useParams();
 
   useEffect(() => {
     setLoading(true);
-    fetch("https://63e3eea365ae4931771adf9f.mockapi.io/api/get/products")
+    fetch(
+      `https://63e3eea365ae4931771adf9f.mockapi.io/api/get/products/${params.id}`
+    )
       .then((response) => response.json())
       .then((json) => {
         setData(json);
@@ -26,18 +30,8 @@ function NavItem(props) {
   if (!data) return null;
   return (
     <>
-      <div className="plp-header">
-        <h1>{props.page}</h1>
-        <img src={props.imgUrl} alt="" />
-      </div>
-      <div className="plp-body">
-        <div className="plp-products">
-          {data.map((prod) => (
-            <ProductCard {...prod} />
-          ))}
-        </div>
-      </div>
+      <ProductCard {...data} />
     </>
   );
 }
-export default NavItem;
+export default ProductDetails;

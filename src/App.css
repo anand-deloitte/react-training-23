@@ -36,3 +36,38 @@
     transform: rotate(360deg);
   }
 }
+.plp-header{
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.plp-header h1{
+  position: absolute;
+  align-self: center;
+  left: 0;
+  background-color: #9595ee;
+  color: white;
+  padding: 10px 10px 10px 7.5%;
+}
+
+.plp-header img{
+  width: 70%;
+  height: 274px;
+}
+.plp-products{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.plp-card{
+margin: 40px;
+}
+.plp-body{
+  display: flex;
+  flex-direction: row;
+
+}
+/* .plp-filters{
+  width: 30%;
+} */

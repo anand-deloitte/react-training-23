@@ -13,17 +13,20 @@ function Header(props) {
         <Bars />
 
         <NavMenu>
-          <NavLink to="/home" activeStyle>
-            Home
+        <NavLink to="/home" activeStyle>
+           Home
           </NavLink>
-          <NavLink to="/about" activeStyle>
-            About
+          <NavLink to="/newArrivals" activeStyle>
+            New Arrivals
           </NavLink>
-          <NavLink to="/events" activeStyle>
-            Events
+          <NavLink to="/womens" activeStyle>
+            Womens
           </NavLink>
-          <NavLink to="/blogs" activeStyle>
-            Blogs
+          <NavLink to="/mens" activeStyle>
+            Mens
+          </NavLink>
+          <NavLink to="/electronics" activeStyle>
+            Electronics
           </NavLink>
           <NavLink to="/sign-up" activeStyle>
             Sign Up
