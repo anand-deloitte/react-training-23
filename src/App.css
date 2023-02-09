@@ -12,7 +12,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #283434;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -80,3 +80,52 @@ input[type=text], select {
   border-radius: 4px;
   box-sizing: border-box;
 }
+
+img {
+  width: 100%;
+}
+
+* {box-sizing:border-box;}
+body {background-color:#c8c8c800; font-family:gibson; margin:10px;}
+
+/* GRID */
+.plp-product__container {
+
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 20px;
+}
+
+/* PRODUCT STYLES */
+.plp-product {
+
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+  box-shadow: 10px 10px 5px #aaaaaa;
+}
+
+.plp-product__image {
+  width:100%;
+  padding-bottom: 20px;
+}
+.plp-product__title {
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  margin: 0;
+ 
+}
+.plp-product__price {
+  font-family: gin;
+  font-size: 23px;
+  margin: 0 0 .25rem;
+
+}
+
+.show-button{
+  font-style: initial;
+    font-size: 20px;
+    border-radius: 50%;
+}
+

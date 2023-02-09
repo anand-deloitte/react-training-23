@@ -8,6 +8,9 @@ import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
 import Home from "./Pages/Home";
 import About from "./Pages/About";
 import Contact from "./Pages/Contact";
+import Product from "./Pages/Product";
+// import ProductDetails from "./Product/ProductDetail";
+import ProductDetail from "./Product/ProductDetail";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -19,18 +22,20 @@ root.render(
         <Link className="w3-tag w3-margin-bottom w3-padding-right-32" to="/home">Home </Link>
         <Link  className="w3-tag w3-margin-bottom w3-padding-right-32"to="/about">About </Link>
         <Link className="w3-tag w3-margin-bottom w3-padding-right-32" to="/contact">Contact </Link>
+        <Link className="w3-tag w3-margin-bottom w3-padding-right-32" to="/Product">Products </Link>
       </div>
       <Routes>
         <Route path="/" element={<MyApp />} />
         <Route path="/home" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/Product" element={<Product />} />
         <Route path="/Travel" element={<MyApp />} />
         <Route path="/NewYork" element={<MyApp />} />
         <Route path="/London" element={<MyApp />} />
+        <Route path="/Product/:productId" element={<ProductDetail/>} />
       </Routes>
     </BrowserRouter>
-    ,
   </React.StrictMode>
 );
 

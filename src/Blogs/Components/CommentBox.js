@@ -22,7 +22,7 @@ const CommentBox = () => {
 
   return (
     <>
-      <div className="w3-col m4 w3-hide-small w3-right w3-padding">
+      <div className="w3-col m4 w3-hide-small w3-right">
         {showForm ? (
           <>
             <span className="w3-padding-large w3-right">
