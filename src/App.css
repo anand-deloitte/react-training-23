@@ -48,3 +48,11 @@ body,h1,h2,h3,h4,h5 {
 img {
   width: 100%;
 }
+
+.produt-grid {
+  display: flex;
+  padding: 40px !important;
+  flex-wrap: wrap;
+  row-gap: 20px;
+  column-gap: 20px;
+}

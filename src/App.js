@@ -10,11 +10,9 @@ import AboutMe from './components/AboutMe';
 import Tags from './components/Tags';
 import PopularBlogs from './components/PopularBlogs';
 import blogs from "./static/data"
+import { Link } from "react-router-dom";
 import Footer from "./components/Footer";
 
-// import ContextComp from "./context";
-import UserContext from "./Context";
-import Services from "./FetchCallSample";
 function MyApp(props) {
   // const [myState, updateState] = useState("name");
 
@@ -24,6 +22,7 @@ function MyApp(props) {
   return (
     <>
     <div className="w3-content">
+      <Link to="/FetchData" className="w3-tag w3-light-blue w3-small w3-margin-bottom">Product Grid</Link>
       <Header />
       <div className="w3-col l8 s12">
         <Blogs title={blogs.blog1.title} image={blogs.blog1.image} desc={blogs.blog1.desc} date={blogs.blog1.date} />

@@ -11,6 +11,7 @@ import Contact from "./Pages/Contact";
 import Travel from "./Pages/Travel";
 import NewYork from "./Pages/NewYork";
 import London from "./Pages/London";
+import FetchData from "./Pages/FetchData";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -33,6 +34,7 @@ root.render(
         <Route path="/Travel" element={<Travel />} />
         <Route path="/NewYork" element={<NewYork />} />
         <Route path="/London" element={<London />} />
+        <Route path="/FetchData" element={<FetchData />} />
       </Routes>
     </BrowserRouter>
     ,
