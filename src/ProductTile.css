@@ -1,0 +1,25 @@
+.plp-cards {
+    display: flex;
+    justify-content: end;
+    flex-wrap: wrap;
+    background: #f9f9f9;
+}
+.show-product {
+    border: 1px solid #000;
+    background: transparent;
+    border-radius: 10px;
+}
+.product-tile {
+    margin: 24px;
+    flex: 1 1 29%;
+}
+.img {
+    max-width: 300px;
+}
+.pdp-link {
+    color: #0070d2;
+    text-decoration: underline;
+}
+.price {
+    color: #000000;
+}
