@@ -3,6 +3,8 @@ export const routepath = [
     {'path':'introduction', 'displayMessage':'Your Introduction', 'component':'<IntroductionComponent />'},
     {'path':'newsletter', 'displayMessage':'Newsletter', 'component':'<NewsletterComponent />'},
     {'path':'popularpost', 'displayMessage':'PopularPostsComponent', 'component':'<PopularPostsComponent />'},
+    {'path':'plp', 'displayMessage':'PLP Page', 'component':'<PLPComponent />'},
+    {'path':'productcard', 'displayMessage':'', 'component':'<ProductComponent />'},
     {'path':'*', 'displayMessage':'', 'component':'<App />'}
 ];
 
@@ -83,3 +85,7 @@ export const popularpostcomponentdata2 = [
         postShortDesc: 'Article 48D'
     }
 ];
+
+export const GET_ALL_PRODUCTS_URL = "https://63e22e07ad0093bf29c9980e.mockapi.io/teststore/plp";
+
+export const productData = [{price:"8",name:"Unbranded Concrete Gloves",img:"https://loremflickr.com/640/480/fashion",id:"1"}]

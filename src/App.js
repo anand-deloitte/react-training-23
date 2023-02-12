@@ -15,7 +15,7 @@ import PopularPostsComponent from './components/PopularPostsComponent';
 import TagComponent from "./components/TagComponent";
 import { introductioncomponentdata1, newslettercomponentdata1, newslettercomponentdata2, popularpostcomponentdata1 } from "./constants/Constants";
 
-function App(props) {
+function App() {
 
   return (
     <ChakraProvider>

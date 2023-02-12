@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Router from "../Router";
-import { Box, Flex } from '@chakra-ui/react'
+import { Box, Flex, ChakraProvider } from '@chakra-ui/react'
 
 // StateFul Component
 class HeaderComponent extends Component {

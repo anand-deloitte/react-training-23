@@ -1,6 +1,8 @@
+import { ChakraProvider } from "@chakra-ui/react";
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { routepath } from "../constants/Constants";
+
 // StateFul Component
 class TagComponent extends Component {
   constructor() {
@@ -9,7 +11,7 @@ class TagComponent extends Component {
 
   render() {
     return (
-        <div className="w3-card w3-margin">
+        <ChakraProvider className="w3-card w3-margin">
         <div class="w3-container w3-padding tag-component-header">
             <h4>Tags (Route)</h4>
         </div>
@@ -20,7 +22,7 @@ class TagComponent extends Component {
                 })}
             </p>
         </div>
-      </div>
+      </ChakraProvider>
     );
   }
 }

@@ -1,4 +1,6 @@
+import { ChakraProvider } from "@chakra-ui/react";
 import React, { Component } from "react";
+
 // StateFul Component
 class PopularPostsComponent extends Component {
   constructor(props) {
@@ -7,7 +9,7 @@ class PopularPostsComponent extends Component {
 
   render() {
     return (
-        <div className="w3-card w3-margin">
+        <ChakraProvider className="w3-card w3-margin">
           <div class="w3-container w3-padding popular-post-header">
             <h4>Popular Posts</h4>
           </div>
@@ -20,7 +22,7 @@ class PopularPostsComponent extends Component {
                             </li>
           })}
           </ul>
-      </div>
+      </ChakraProvider>
     );
   }
 }

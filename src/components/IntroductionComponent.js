@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Flex } from "@chakra-ui/react";
+import { ChakraProvider,Flex } from "@chakra-ui/react";
 
 // StateFul Component
 class IntroductionComponent extends Component {
@@ -9,6 +9,7 @@ class IntroductionComponent extends Component {
 
   render() {
     return (
+      <ChakraProvider>
       <Flex className="introduction w3-card w3-margin w3-margin-top" flexDirection='column' bg='white'>
         <img src={this.props.userImage} alt=""></img>
         <div className="w3-container w3-white">
@@ -16,6 +17,7 @@ class IntroductionComponent extends Component {
             <p>{this.props.userIntroduction}</p>
         </div>
       </Flex>
+      </ChakraProvider>
     );
   }
 }
