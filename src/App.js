@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import DelhiData from './Delhi';
 import NewYorkData from './NewYork';
 import LondonData from './London';
+import Services from './SamplePLP';
 
 function App(props) {
   return (
@@ -20,6 +21,7 @@ function App(props) {
             <Route path='/london' element={< LondonData data={json} />}></Route>  
             <Route path='/newyork' element={< NewYorkData data={json} />}></Route>
             <Route path='/delhi' element={< DelhiData data={json} />}></Route>
+            <Route path='/product' element={< Services />}></Route>
         </Routes> 
       </BrowserRouter>
       <footer className='App-footer'><h2>Footer</h2></footer>

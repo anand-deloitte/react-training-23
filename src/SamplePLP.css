@@ -1,0 +1,32 @@
+.prod-container {
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.nav-bar {
+    list-style-type: none;
+    font-weight: 600;
+}
+
+.left-nav {
+    background-color: aliceblue;
+}
+
+.product-card {
+    padding: 5px;
+    margin: 5px;
+}
+
+.quickView {
+    margin-top: 10px;
+}
+
+.modal-dialog {
+    max-width: unset;
+}
+
+.price {
+    font-weight: 600;
+    text-align: center;
+    font-size: 18px;
+}

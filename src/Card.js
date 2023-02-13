@@ -47,6 +47,7 @@ function BodyShorthandExample(props) {
                     <Link to="/newyork" className='tag-link'>New York</Link>
                     <Link to="/london" className='tag-link'>London</Link>
                     <Link to="/delhi" className='tag-link'>Delhi</Link>
+                    <Link to="/product" className='tag-link'>Products PLP</Link>
                 </Card.Body>  
             </Card> 
         </div>
