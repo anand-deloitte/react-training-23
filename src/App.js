@@ -1,39 +1,26 @@
-import React, { useState, useEffect } from "react";
-
-import logo from "./logo.svg";
 import "./App.css";
-import Counter from "./Counter";
-import CounterFunctional from "./CounterFunctionalComp";
-import UserContext from "./Context";
-import Services from "./FetchCallSample";
-function MyApp(props) {
-  const [myState, updateState] = useState("name");
+import { Routes, Route } from 'react-router-dom';
+import Header from "./component/Header";
+import ProductListPage from "./Pages/ProductListPage";
+import Home from "./Pages/Home";
+import About from "./Pages/About";
+import Contact from "./Pages/Contact";
+import ProductDetails from "./Pages/ProductDetails";
 
-  const changeState = () => {
-    updateState("newName");
-  };
+function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Welcome : {props.name}</p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-
-        <button onClick={changeState}>change State</button>
-        <Counter data={myState} />
-        <CounterFunctional data={myState} />
-        <Services></Services>
-        <UserContext></UserContext>
-      </header>
+      <Header />
+      <Routes>
+        <Route path="/" element={<ProductListPage />}></Route>
+        <Route path="/home" element={<Home />}></Route>
+        <Route path="/about" element={<About />}></Route>
+        <Route path="/products" element={<ProductListPage />}></Route>
+        <Route path="/contacts" element={<Contact />}></Route>
+        <Route path="/Product/:productId" element={<ProductDetails />}></Route>
+      </Routes>
     </div>
   );
 }
 
-export default MyApp;
+export default App;
