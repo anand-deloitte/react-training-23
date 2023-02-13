@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';  
 import {Container, Card, Nav, Button, Modal} from 'react-bootstrap';
 import './SamplePLP.css';
-import ProductMod from "./ProductModal";
 
 const Services = () => {
 const [data, setData] = useState(null);
@@ -13,7 +12,6 @@ const [selectedProduct, setSelectedProduct] = useState(null);
 
 useEffect(() => {
 setLoading(true);
-// https://63e22e07ad0093bf29c9980e.mockapi.io/teststore/plp/1  // sample get call for get product by id
 fetch("https://63e22e07ad0093bf29c9980e.mockapi.io/teststore/plp")
     .then((res) => res.json())
     .then((res) => {
@@ -33,7 +31,6 @@ if (!data) return null;
 const showModal = (item) => {
 setIsOpen(true);
 setSelectedProduct(item);
-console.log(selectedProduct);
 }
 
 const closeModal = () => {
