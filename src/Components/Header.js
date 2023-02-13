@@ -22,8 +22,8 @@ function Header(props) {
           <NavLink to="/events" activeStyle>
             Events
           </NavLink>
-          <NavLink to="/blogs" activeStyle>
-            Blogs
+          <NavLink to="/plp" activeStyle>
+            PLP
           </NavLink>
           <NavLink to="/sign-up" activeStyle>
             Sign Up

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
+import ProductCard from "./ProductCard";
 
-const Services = () => {
+const Services = (props) => {
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -24,10 +25,19 @@ const Services = () => {
   if (!data) return null;
 
   return (
-    <div>
-      <h1>Data:</h1>
-      <pre>{JSON.stringify(data, null, 2)}</pre>
-    </div>
+    <>
+      <div className="plp-header">
+        <h1>{props.page}</h1>
+        <img src={props.imgUrl} alt="" />
+      </div>
+      <div className="plp">
+        <div className="row">
+          {data.map((prod) => (
+            <ProductCard {...prod} />
+          ))}
+        </div>
+      </div>
+    </>
   );
 };
 

@@ -165,3 +165,18 @@ body {
   color: red;
   text-transform: capitalize;
 }
+
+.plp {
+  margin: 0px !important;
+}
+
+.plp-tile {
+  border: 1px solid white;
+  background-color: #ccc;
+  padding: 10px 0;
+  margin: 0;
+}
+
+.plp-tile img {
+  margin-bottom: 10px;
+}
