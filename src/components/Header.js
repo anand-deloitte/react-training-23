@@ -15,14 +15,20 @@ function Header(props) {
           <NavLink to="/home" activeStyle>
             Home
           </NavLink>
-          <NavLink to="/about" activeStyle>
-            About
+          <NavLink to="/newArrivals" activeStyle>
+            New Arrivals
           </NavLink>
-          <NavLink to="/services" activeStyle>
-            Services
+          <NavLink to="/womens" activeStyle>
+            Women
           </NavLink>
-          <NavLink to="/blogs" activeStyle>
-            Blogs
+          <NavLink to="/mens" activeStyle>
+            Mens
+          </NavLink>
+          <NavLink to="/electronics" activeStyle>
+            Electronics
+          </NavLink>
+          <NavLink to="/topSeller" activeStyle>
+            Top Seller
           </NavLink>
         </NavMenu>
         <NavBtn>

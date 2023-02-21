@@ -32,7 +32,80 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+.plp-header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.plp-header h1 {
+  position: absolute;
+  align-self: center;
+  left: 0;
+  background-color: #9595ee;
+  color: white;
+  padding: 10px 10px 10px 7.5%;
+}
+
+.plp-header img {
+  width: 70%;
+  height: 274px;
+}
+
+.plp-products {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.plp-card {
+  margin: 40px;
+}
+
+.plp-card a {
+  text-decoration: none;
+  color: #282c34;
+}
+
+.plp-card .price {
+  font-weight: 800;
+}
+
+.plp-body {
+  display: flex;
+  flex-direction: row;
+}
+
+.plp-modal {
+  display: flex;
+  justify-content: space-around
+}
+
+.plp-modal .name {
+  color: #0070d2;
+  text-transform: capitalize;
+}
+
+.plp-modal .desc {
+  text-transform: capitalize;
+}
+
+.plp-modal .price {
+  font-weight: bold;
+}
+
+.plp-modal, .plp-card button {
+  margin-right: 5px;
+}
+
+.anc {
+  display: flex;
+  justify-content: center;
 }
